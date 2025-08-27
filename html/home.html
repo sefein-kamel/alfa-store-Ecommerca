@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALFA Home</title>
+    <link rel="Website Icon" type="png" href="../images/logo.png">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/home-style.css" />
+  </head>
+  <body>
+    <!--Header-->
+    <header>
+      <div class="logo">
+        <img src="../images/logo.png" alt="ALFA Store Logo" />
+        <h1>ALFA Store</h1>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#" class="active">home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+          <li>
+            <a href="cart.html"><i class="bi bi-cart4"></i></a>
+          </li>
+          <li>
+            <a id="logoutBtn" href="#"><i class="bi bi-box-arrow-right"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--Hero Slide-->
+    <div class="hero-slide">
+      <div class="content">
+        <img id="slider" src="../images/Products.jpg" />
+      </div>
+      <div class="buttons">
+        <button class="back" onclick="prev()">
+          <i class="bi bi-arrow-left-circle"></i>
+        </button>
+        <button class="next" onclick="next()">
+          <i class="bi bi-arrow-right-circle"></i>
+        </button>
+      </div>
+    </div>
+
+    <main>
+      <div class="container">
+        <div class="main-heading">
+          <h2 class="mt-5">Our Products</h2>
+          <p>
+            You will find everything you are looking for at the lowest prices.
+          </p>
+        </div>
+
+        <!-- filter -->
+        <ul id="filters" class="shuffle">
+          <li onclick="filterProducts('all')" class="active">All</li>
+          <li onclick="filterProducts('phone')">phones</li>
+          <li onclick="filterProducts('laptop')">laptops</li>
+          <li onclick="filterProducts('clothes')">clothes</li>
+          <li onclick="filterProducts('watch')">watches</li>
+        </ul>
+      </div>
+      <!-- product -->
+      <div class="products">
+        <div class="container text-center">
+          <div id="products" class="row row-cols-3 py-3 justify-content-center">
+            <!-- product card -->
+          </div>
+        </div>
+      </div>
+      <div id="message"></div>
+    </main>
+
+    <!--Start Footer-->
+    <footer>
+      <div class="footer-container">
+        <img src="../images/logo.png" alt="" />
+        <p>ALFA Store</p>
+        <div class="social-icons">
+          <a href="#"><i class="bi bi-house-fill active"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-twitter-x"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+          <a href="#"><i class="bi bi-github"></i></a>
+        </div>
+        <p class="copyright">
+          &copy; 2025 <a href="#">ALFA</a> All Right Reserved
+        </p>
+      </div>
+    </footer>
+
+    <script src="../script/bootstrap.bundle.js"></script>
+    <script src="../script/products-data.js"></script>
+    <script src="../script/home-script.js"></script>
+  </body>
+</html>
